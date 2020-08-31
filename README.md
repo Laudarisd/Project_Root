@@ -9,13 +9,13 @@ Table of contents
 
 <!--ts-->
    * [Data-preprocessing](https://github.com/Laudarisd/Project_Root/tree/master/Data-preprocessing)
-   * [HTML-project](#HTML-project)
-   * [Object-Detection](#Object-Detection)
+   * [HTML-project](https://github.com/Laudarisd/Project_Root/tree/master/HTML-project)
+   * [Object-Detection](https://github.com/Laudarisd/Project_Root/tree/master/Object-Detection)
       * [Keras-Retinanet](#Keras-Retinanet)
       * [Pytorch](#Pytorch)
       * [YOLO](#YOLO)
-   * [Python-Projects](#Python-Projects)
-   * [Setup-Installation](#Setup-Installation)
+   * [Python-Projects](https://github.com/Laudarisd/Project_Root/tree/master/Python-Projects)
+   * [Setup-Installation](https://github.com/Laudarisd/Project_Root/tree/master/Setup-Installation)
    
 <!--te-->
 
