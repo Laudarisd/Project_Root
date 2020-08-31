@@ -16,6 +16,7 @@ Table of contents
       * [YOLO](https://github.com/Laudarisd/Project_Root/tree/master/Object-Detection/YOLO)
    * [Python-Projects](https://github.com/Laudarisd/Project_Root/tree/master/Python-Projects)
    * [Setup-Installation](https://github.com/Laudarisd/Project_Root/tree/master/Setup-Installation)
+   * [Smart_Self_project](https://github.com/Laudarisd/Project_Root/tree/master/Smart_Self_project)
    
 <!--te-->
 
