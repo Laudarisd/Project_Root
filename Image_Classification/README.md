@@ -19,7 +19,9 @@ For more information [click here](https://www.tensorflow.org/lite/models/image_c
 
 
 
-* Frame wrok
+In this project, I used cistom datasets to train and test the image classification model.
+All the descriptions are given below:
+
    
 
 
