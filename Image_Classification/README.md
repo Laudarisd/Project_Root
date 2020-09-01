@@ -29,32 +29,37 @@ Table of contents
 ==================
 
 <!--ts-->
+* [Source] (#Source)
 
-* [Source](#Source)
     * [Setup]()
     * [Data_collection]()
     * [Data_pre-processing]()
     * [Training]()
-    * [Training]()
     * [Inference]()
         * [Single_model_inference]()
-        * [Binary_model_inference]()
+        * [Binary_model_inference] ()
+    * [Result]
 <!--te-->
 
-Data Collection
+Setup
 ===============
 
 
 
 
 
-Data pre-processing
+Data_collection
 ====================
 
 
 
-Training
+Data_pre-processing
 ==========
+
+
+
+Training
+===========
 
 
 
@@ -65,6 +70,7 @@ Inference
 
 Result
 ==========
+
 
 
 | image id | class | accuracy | 
