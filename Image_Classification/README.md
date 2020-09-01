@@ -94,16 +94,40 @@ Training
 ===========
 In this project I used `Efficientnet` frame work to train my custom dataset.
 
+After preparing dataset, edit the necessary parts in the following python file and run the comand in terminal.
+
+```
+root@2af60c98e769:/data/source# python3 Efnet_tf_data_train.py 
+```
+If the training goes well, it will show the following information in terminal.
+
+**Training Images**
+
 
 Inference
 ===========
+In my project, I did two types of inference. 
+
+- **Single_model_inference**
+
+This is just a sigle model inference to test my models. 
+```
+root@2af60c98e769:/data/source# python3 tf2_model_test.py 
+```
+
+
+- **Binary_model_inference**
+In this task, I did inference with two models at the same time.
+- `Classification` model (`109` classes)
+- `Empty` model(binary class -i.e. `empty` column & `product` column)
+
 
 
 
 Result
 ==========
 
-
+**Single_model_inference**
 
 | image id | class | accuracy | 
 | :------------- | :----------: | -----------: |
