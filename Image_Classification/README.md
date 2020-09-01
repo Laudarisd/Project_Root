@@ -1,17 +1,9 @@
 About
 ===========
-This section contains the architecture of smart-self project.
+This section contains the architecture image classification.
 
-* Hardware
-    * Loadcell
-    * Raspberri pi & Camera
-
-* Software
-    * Computer Vision 
-    * Back End
-    * DB 
-    
-
+* Frame wrok
+   
 
 
 Table of contents
@@ -54,7 +46,6 @@ Result
 
 
 | image id | class | accuracy | 
-
 | :------------- | :----------: | -----------: |
 | 1.jpg  | top_latte_pet | 0.9880806 |
 | 2.jpg  | top_theblack_380_pet | 0.99987173 |
