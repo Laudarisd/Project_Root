@@ -66,9 +66,11 @@ Data_pre-processing
 ==========
 
 * Fine Crop - Based on annotation files, I cropped the images and resized them.
+
 <img src="fine_24.png" width="250"> <img src="fine_32.png" width="250"> <img src="test_batch0_gt.jpg" width="250">
 
 * Noise Crop - I annotated the root image including noises. After that I cropped them and resized. 
+
 <img src="noise_1.png" width="250"> <img src="noise_2.png" width="250"> <img src="test_batch0_gt.jpg" width="250">
 
 * Augmentation: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](). I generated around `5000` images for each classes.
