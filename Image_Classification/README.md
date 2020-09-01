@@ -73,7 +73,7 @@ Data_pre-processing
 
 <img src="noise_1.png" width="250"> <img src="noise_2.png" width="250"> 
 
-* `Augmentation`: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](#/Source/Data_pre-processing/albumentation_aug1.py). I generated around `5000` images for each classes.
+* `Augmentation`: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Data_pre-processing/albumentation_aug1.py). I generated around `5000` images for each classes.
 
 <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/194.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/56.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/66.png" width="250">
 
@@ -87,19 +87,12 @@ Data_pre-processing
 **I only created `5000` images for each classes because of my dataset scenario.** 
 
 
-
-
-
-
-
-Data_pre-processing
-==========
-
+* `Train, Valid` - After completing all the above work, separate dataset in to train (80%) and valid(20%)
 
 
 Training
 ===========
-
+In this project I used `Efficientnet` frame work to train my custom dataset.
 
 
 Inference
