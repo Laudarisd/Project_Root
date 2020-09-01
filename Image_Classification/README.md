@@ -29,15 +29,16 @@ Table of contents
 ==================
 
 <!--ts-->
-*[Source](#Source)
-    *[Setup]()
-    *[Data_collection]()
-    *[Data_pre-processing]()
-    *[Training]()
-    *[Training]()
-    *[Inference]()
-        *[Single_model_inference]()
-        *[Binary_model_inference]()
+
+* [Source](#Source)
+    * [Setup]()
+    * [Data_collection]()
+    * [Data_pre-processing]()
+    * [Training]()
+    * [Training]()
+    * [Inference]()
+        * [Single_model_inference]()
+        * [Binary_model_inference]()
 <!--te-->
 
 Data Collection
