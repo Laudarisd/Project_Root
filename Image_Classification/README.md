@@ -87,7 +87,7 @@ Data_pre-processing
 **I only created `5000` images for each classes because of my dataset scenario.** 
 
 
-* `Train, Valid` - After completing all the above work, separate dataset in to train (80%) and valid(20%)
+* `Train, Valid` - After completing all the above works, separate dataset in to train (80%) and valid(20%)
 
 
 Training
