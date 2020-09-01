@@ -55,7 +55,7 @@ Data_collection
 In this project, I collected data from refrigerator of convenient store. Basically each refrigerator has 6 floors with 8 columns each. After setting up camera inside of refrigerator, I collected the images as much as possible with different angles and different position. Similalry, I tried to collect the images by changing the products position in each columns. 
 e.g.
 
-<img src="08181_product_w_1_1.jpg" width="250"> <img src="08181_product_w_2_1.jpg" width="250"> <img src="08181_product_w_2_6.jpg" width="250">
+<img src="./Data_collection/08181_product_w_1_1.jpg" width="250"> <img src="./Data_collection/08181_product_w_2_1.jpg" width="250"> <img src="./Data_collection/08181_product_w_2_6.jpg" width="250">
 
 
 After collecting the data, I did annotations for each product because I wanted to use the same datasets for image detection project. 
