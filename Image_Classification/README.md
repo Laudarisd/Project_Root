@@ -71,13 +71,13 @@ Data_pre-processing
 * Noise Crop - I annotated the root image including noises. After that I cropped them and resized.
 <img src="noise_1.jpg" width="250"> <img src="noise_2.jpg" width="250">
 
-* Augmentation: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](). I generated around `5000` images for each classes.
+**Augmentation: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](). I generated around `5000` images for each classes.**
 
-**atio of fine and noise data should me properly managed. **
+**Ratio of fine and noise data should me properly managed.**
 
-**In image `Augmentation`, hyper parameter should be modified based on dataset and test scenario. **
+**In image `Augmentation`, hyper parameter should be modified based on dataset and test scenario.**
 
-**I only created `5000` images for each classes because of my dataset scenario. ** 
+**I only created `5000` images for each classes because of my dataset scenario.** 
 
 
 
