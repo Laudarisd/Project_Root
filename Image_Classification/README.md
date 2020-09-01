@@ -27,15 +27,17 @@ All the descriptions are given below:
 
 Table of contents
 ==================
-Cumputer vision
 
 <!--ts-->
-* [Data Collection] ()
-* [Data pre-processing]()
-    * [Crop]()
-    * [Augmentation]()
-* [Training]()
-* [Inference]()
+* [Source] (#Source)
+    * [Setup]()
+    * [Data_collection]()
+    * [Data_pre-processing]()
+    * [Training]()
+    * [Training]()
+    * [Inference]()
+        *[Single_model_inference]()
+        *[Binary_model_inference]()
 <!--te-->
 
 Data Collection
