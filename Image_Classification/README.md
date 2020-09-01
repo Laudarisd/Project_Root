@@ -37,8 +37,8 @@ Table of contents
     * [Training]()
     * [Inference]()
         * [Single_model_inference]()
-        * [Binary_model_inference] ()
-    * [Result]
+        * [Binary_model_inference]()
+    * [Result]()
 <!--te-->
 
 Setup
