@@ -55,7 +55,7 @@ Data_collection
 In this project, I collected data from refrigerator of convenient store. Basically each refrigerator has 6 floors with 8 columns each. After setting up camera inside of refrigerator, I collected the images as much as possible with different angles and different position. Similalry, I tried to collect the images by changing the position os the products in each columns. 
 e.g.
 
-<img src="./Data_collection/08181_product_w_1_1.jpg" width="250"> <img src="./Data_collection/08181_product_w_2_1.jpg" width="250"> <img src="./Data_collection/08181_product_w_2_6.jpg" width="250">
+<img src="08181_product_w_1_1.png" width="250"> <img src="08181_product_w_2_1.png" width="250"> <img src="08181_product_w_2_6.png" width="250">
 
 
 After collecting the data, I did annotations for each product because I wanted to use the same datasets for image detection project. 
@@ -66,12 +66,12 @@ Data_pre-processing
 ==========
 
 * Fine Crop - Based on annotation files, I cropped the images and resized them.
-<img src="fine_24.jpg" width="250"> <img src="fine_32.jpg" width="250"> 
+<img src="fine_24.png" width="250"> <img src="fine_32.png" width="250"> 
 
-* Noise Crop - I annotated the root image including noises. After that I cropped them and resized.
-<img src="noise_1.jpg" width="250"> <img src="noise_2.jpg" width="250">
+* Noise Crop - I annotated the root image including noises. After that I cropped them and resized. 
+<img src="noise_1.png" width="250"> <img src="noise_2.png" width="250">
 
-**Augmentation: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](). I generated around `5000` images for each classes.**
+* Augmentation: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](). I generated around `5000` images for each classes.
 
 **Ratio of fine and noise data should me properly managed.**
 
