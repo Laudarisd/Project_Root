@@ -46,7 +46,7 @@ Setup
 - Python >= 3
 - Tensorflow 2.0.0 / 2.1.0
 
-*** To use tf 2.2.0 or above, we need to edit trainign code.***
+**To use tf 2.2.0 or above, we need to edit trainign code.**
 
 
 Data_collection
@@ -68,14 +68,16 @@ Data_pre-processing
 * Fine Crop - Based on annotation files, I cropped the images and resized them.
 <img src="fine_24.jpg" width="250"> <img src="fine_32.jpg" width="250"> 
 
-* Noise Crop - I annotated the root image including noises. After that I cropped them and resized. 
+* Noise Crop - I annotated the root image including noises. After that I cropped them and resized.
 <img src="noise_1.jpg" width="250"> <img src="noise_2.jpg" width="250">
 
 * Augmentation: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](). I generated around `5000` images for each classes.
 
-*** Ratio of fine and noise data should me properly managed. ***
-*** In image `Augmentation`, hyper parameter should be modified based on dataset and test scenario. ***
-*** I only created `5000` images for each classes because of my dataset scenario. *** 
+**atio of fine and noise data should me properly managed. **
+
+**In image `Augmentation`, hyper parameter should be modified based on dataset and test scenario. **
+
+**I only created `5000` images for each classes because of my dataset scenario. ** 
 
 
 
