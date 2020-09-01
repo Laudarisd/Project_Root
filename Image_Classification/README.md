@@ -8,14 +8,14 @@ When we subsequently provide a new image as input to the model, it will output t
 
 **dog image**
 
-|Label|	Probability|
-| :-------------: | :----------: | -----------: |
-|rabbit|	0.07|
-|hamster|	0.02|
-|dog|	0.91|
+|Label     |	Probability|
+| :------------- | :----------: | -----------: |
+|rabbit  |	0.07|
+|hamster |	0.02|
+|dog     |	0.91 | 
 
 
-For more information [https://www.tensorflow.org/lite/models/image_classification/overview#what_is_image_classification](click here)
+For more information [click here](https://www.tensorflow.org/lite/models/image_classification/overview#what_is_image_classification)(click here)
 
 
 
