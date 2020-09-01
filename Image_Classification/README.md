@@ -1,6 +1,23 @@
-About
+Image Classification
 ===========
-This section contains the architecture image classification.
+A common use of machine learning is to identify what an image represents. For example, we might want to know what type of animal appears in the following photograph.
+
+The task of predicting what an image represents is called image classification. An image classification model is trained to recognize various classes of images. For example, a model might be trained to recognize photos representing three different types of animals: rabbits, hamsters, and dogs.
+
+When we subsequently provide a new image as input to the model, it will output the probabilities of the image representing each of the types of animal it was trained on. An example output might be as follows:
+
+**dog image**
+
+|Label|	Probability|
+| :-------------: | :----------: | -----------: |
+|rabbit|	0.07|
+|hamster|	0.02|
+|dog|	0.91|
+
+
+For more information [https://www.tensorflow.org/lite/models/image_classification/overview#what_is_image_classification](click here)
+
+
 
 * Frame wrok
    
