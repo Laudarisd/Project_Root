@@ -6,7 +6,7 @@ The task of predicting what an image represents is called image classification. 
 
 When we subsequently provide a new image as input to the model, it will output the probabilities of the image representing each of the types of animal it was trained on. An example output might be as follows:
 
-**dog image**
+<img src="dog.png" width="250">
 
 |Label     |	Probability|
 | :-------------: | :----------: |
