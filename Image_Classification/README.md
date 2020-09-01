@@ -106,9 +106,9 @@ If the training goes well, it will show the following information in terminal.
 
 Inference
 ===========
-In my project, I did two types of inference. 
+In my project, I did two types of inference.
 
-- **Single_model_inference**
+- **Single model inference**
 
 This is just a sigle model inference to test my models. 
 ```
@@ -116,10 +116,15 @@ root@2af60c98e769:/data/source# python3 tf2_model_test.py
 ```
 
 
-- **Binary_model_inference**
+- **Binary model inference**
 In this task, I did inference with two models at the same time.
-- `Classification` model (`109` classes)
-- `Empty` model(binary class -i.e. `empty` column & `product` column)
+   - `Classification` model (`109` classes)
+   - `Empty` model(binary class -i.e. `empty` column & `product` column)
+The main purpose of Binary model inference is to find out empty columns when the product is finished in the refrigerator.
+
+- **Binary model inference with live cam**
+I also tried to test my model in live cam though it was not the object detection task. In this process, I made `.xml` files which contained bounding box as I annotated my images. In live streaming, only the part which are contained by the bounding boxes are tested.
+So result was pretty good and I was happy to use my classification model as detection on live streaming. 
 
 
 
