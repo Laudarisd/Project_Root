@@ -58,7 +58,10 @@ e.g.
 <img src="/Data_collection/08181_product_w_1_1.jpg" width="250"> <img src="/Data_collection/08181_product_w_2_1.jpg" width="250"> <img src="/Data_collection/08181_product_w_2_6.jpg" width="250">
 
 
-After collecting the data, I did annotations for each product because I wanted to use the same datasets for image detection project. 
+After collecting the data, I did annotations for each product because I wanted to use the same datasets for image detection project.
+e.g.
+<img src="/Data_collection/11.png" width="250"> <img src="/Data_collection/12.png" width="250"> 
+
 
 
 
