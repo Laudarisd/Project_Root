@@ -20,8 +20,7 @@ For more information [click here](https://www.tensorflow.org/lite/models/image_c
 
 
 In this project, I used custom datasets to train and test the image classification model.
-All the descriptions are given below:
-
+Detail of the project is given below:
    
 
 
@@ -52,8 +51,11 @@ Setup
 Data_collection
 ====================
 
-In this project, I collected data from refrigerator of convenient store. Basically each refrigerator has 6 floors with 8 columns each. After setting up camera inside of refrigerator, I collected the images as much as possible with different angles and different position. Similalry, I tried to collect the images by changing the position os the products in each columns. 
+I collected data from convenient store's refrigeratoe. Basically, each refrigerator has 6 floors and each flor has 8 columns. After setting up camera inside of refrigerator, I collected the images as much as possible with different angles and different position. Similalry, I tried to collect the images by changing the position of the products in each columns. 
 e.g.
+
+
+**Raw images**
 
 <table border="0">
    <tr>
@@ -73,7 +75,9 @@ e.g.
 
 
 
-After collecting the data, I did annotations for each product because I wanted to use the same datasets for image detection project. 
+After collecting the data, I did `annotations` for each product because I wanted to use the same datasets for image detection project. 
+
+**Images with bounding boxes**
 
 <table border="0">
    <tr>
@@ -89,9 +93,12 @@ After collecting the data, I did annotations for each product because I wanted t
 
 
 Data_pre-processing
-==========
+==========-=======
 
-* `Fine Crop` - Based on annotation files, I cropped the images and resized them.
+First step of training data prepartion was `cropping` the raw images. So, I cropped them as follows:
+
+
+* `Fine Crop` - Based on annotation files, I cropped the images and resized (`224 pixels`) them. [code](https://github.com/Laudarisd/Project_Root/blob/master/Data-preprocessing/img_manuplating/crop_from_xml/crop_from_xml.py)
 
 
  <table border="0">
@@ -106,7 +113,7 @@ Data_pre-processing
    </table>
 
 
-* `Noise Crop` - I annotated the root image including noises. After that I cropped them and resized. 
+* `Noise Crop` - I annotated the root image including noises. After that I cropped them and resized (`224 pixels`).[code]()
 
 <table border="0">
    <tr>
@@ -124,6 +131,8 @@ Data_pre-processing
 
 * `Augmentation`: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Data_pre-processing/albumentation_aug1.py). I generated around `5000` images for each classes.
 
+
+**Sample images after augmentation (vertical flip, change in contrast, rgb,brightness, etc)**
 
    <table border="0">
    <tr>
@@ -168,9 +177,51 @@ Data_pre-processing
 
 Training
 ===========
-In this project I used `Efficientnet` frame work to train my custom dataset.
+In this project I used `Efficientnet`(https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Training/Efnet_tf_data_train.py) frame work to train my custom dataset.
 
-After preparing dataset, edit the necessary parts in the following python file and run the comand in terminal.
+
+```
+import tensorflow as tf
+from tensorflow import keras
+import pathlib
+import random
+import os
+import datetime
+import time
+from efficientnet.tfkeras import EfficientNetB4, preprocess_input
+
+AUTOTUNE = tf.data.experimental.AUTOTUNE
+strategy = tf.distribute.experimental.CentralStorageStrategy()
+
+BATCH_SIZE = 32
+IMG_SIZE = 224
+NUM_EPOCHS = 30
+EARLY_STOP_PATIENCE = 3
+
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    try:
+        tf.config.experimental.set_memory_growth(gpus[0], True)
+    except RuntimeError as e:
+        print(e)
+```
+
+Edit these line:
+
+```
+if __name__ == "__main__":
+    model_name = "EfficientNet-B4"
+    dataset_name = 'datasets'
+    train_dataset_path = '/data/' + dataset_name + '/train'
+    valid_dataset_path = '/data/' + dataset_name + '/valid'
+
+       saved_path = '/data/model'
+```
+
+
+
+
+Run training:
 
 ```
 root@2af60c98e769:/data/source# python3 Efnet_tf_data_train.py 
@@ -195,30 +246,85 @@ If the training goes well, it will show the following information in terminal.
       </td>
    </tr>
    </table>
+**Model can be changes by changing these lines**
+Such as for B5:
+
+```
+from efficientnet.tfkeras import EfficientNetB5, preprocess_input
+```
+
+
+and 
+
+```
+base_model = EfficientNetB5(input_shape=(IMG_SIZE, IMG_SIZE, 3),
+                                weights="imagenet", # noisy-student
+                                include_top=False)
+```
+
+**Model will be saved in `modeldataset` folder**
+
+
 
 
 Inference
 ===========
-In my project, I did two types of inference.
+Here I did two types of inference.
 
 - **Single model inference**
 
-This is just a sigle model inference to test my models. 
+This is just a sigle model [inference](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Single_model_inference/tf2_model_test.py) to test my models. 
+
+```
+# Total number of classes = 109
+```
+
+Edit `images` path, `classes.txt` path and `model` path
+
+```
+import tensorflow as tf
+import glob
+from tensorflow import keras
+import numpy as np
+import cv2
+import os
+import pandas as pd
+from efficientnet.tfkeras import preprocess_input
+# from tensorflow.keras.applications.resnet50 import preprocess_input
+
+model_path = '/data/data/interminds/modeldatasets/2020.08.31_05:10_tf2/datasets.h5'
+
+#dataset_name = model_path.split('/')[-3]
+dataset_name = 'test'
+test_img_path = '/data/data/interminds/' + dataset_name + '/img/*.jpg'
+```
+
+Run inference:
+
+
 ```
 root@2af60c98e769:/data/source# python3 tf2_model_test.py 
 ```
+
+**Images**
 
  <table border="0">
    <tr>
       <td>
       <img src="./Source/Single_model_inference/test_img.png" width="100%" />
       </td>
+   </tr>
+   </table>
+
+**Terminal result**
+
+<table border="0">
+   <tr>
       <td>
       <img src="./Source/Single_model_inference/result_terminal.png" width="100%" />
       </td>
    </tr>
    </table>
-
 
 
 - **Binary model inference**
