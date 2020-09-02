@@ -429,6 +429,10 @@ empty_model = tf.keras.models.load_model(empty_model_path)
 
 
 
+**Output images with classes**
+
+
+
 <table border="0">
    <tr>
       <td>
