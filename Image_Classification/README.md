@@ -156,7 +156,7 @@ Data_pre-processing
 
 
 
-**Ratio of fine and noise data should me properly managed.**
+**Ratio of fine and noise data should be properly managed.**
 
 **In image `Augmentation`, hyper parameter should be modified based on dataset and test scenario.**
 
@@ -179,6 +179,23 @@ If the training goes well, it will show the following information in terminal.
 
 **Training Images**
 
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Training/1.png" width="100%" />
+      </td>
+   </tr>
+   </table>
+
+
+<table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Training/2.png" width="100%" />
+      </td>
+   </tr>
+   </table>
+
 
 Inference
 ===========
@@ -191,6 +208,18 @@ This is just a sigle model inference to test my models.
 root@2af60c98e769:/data/source# python3 tf2_model_test.py 
 ```
 
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Single_model_inference/test_img.png" width="100%" />
+      </td>
+      <td>
+      <img src="./Source/Single_model_inference/result_terminal.png" width="100%" />
+      </td>
+   </tr>
+   </table>
+
+
 
 - **Binary model inference**
 In this task, I did inference with two models at the same time.
@@ -201,6 +230,28 @@ The main purpose of Binary model inference is to find out empty columns when the
 - **Binary model inference with live cam**
 I also tried to test my model in live cam though it was not the object detection task. In this process, I made `.xml` files which contained bounding box as I annotated my images. In live streaming, only the part which are contained by the bounding boxes are tested.
 So result was pretty good and I was happy to use my classification model as detection on live streaming. 
+
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Binary_model_inference/111.png" width="100%" />
+      </td>
+      <td>
+      <img src="./Source/Binary_model_inference/112.png" width="100%" />
+      </td>
+   </tr>
+   </table>
+
+
+
+<table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Binary_model_inference/1598921008766.png" width="100%" />
+      </td>
+   </tr>
+   </table>
+
 
 
 
@@ -229,7 +280,13 @@ Result
 | 15.jpg |  leblen_peach_pet | 0.9999969 |
 
 
-
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Result/1598921008766.png" width="100%" />
+      </td>
+   </tr>
+   </table>
 
 
 
