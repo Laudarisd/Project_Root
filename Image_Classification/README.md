@@ -36,7 +36,7 @@ Table of contents
     * [Training](#Training)
     * [Inference](#Inference)
         * [Single_model_inference](#Single_model_inference)
-        * [Binary_model_inference](Binary_model_inference)
+        * [Binary_model_inference](#Binary_model_inference)
     * [Result](#Result)
 <!--te-->
 
