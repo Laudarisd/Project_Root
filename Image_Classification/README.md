@@ -79,21 +79,31 @@ Data_pre-processing
    <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_pre-processing/194.png" width="100%" />
+      <img src="./Source/Data_pre-processing/194.png" width="80%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/56.png" />
+      <img src="./Source/Data_pre-processing/56.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/66.png" width="80%" />
       </td>
    </tr>
    </table>
 
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Data_pre-processing/70.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/265.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/375.png" width="80%" />
+      </td>
+   </tr>
+   </table>
 
-
-
-
-<img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/194.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/56.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/66.png" width="250">
-
-<img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/70.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/265.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/375.png" width="250">
 
 
 **Ratio of fine and noise data should me properly managed.**
