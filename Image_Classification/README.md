@@ -55,21 +55,70 @@ Data_collection
 In this project, I collected data from refrigerator of convenient store. Basically each refrigerator has 6 floors with 8 columns each. After setting up camera inside of refrigerator, I collected the images as much as possible with different angles and different position. Similalry, I tried to collect the images by changing the position os the products in each columns. 
 e.g.
 
-<img src="08181_product_w_1_1.png" width="250"> <img src="08181_product_w_2_1.png" width="250"> <img src="08181_product_w_2_6.png" width="250">
+<table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Data_collection/08181_product_w_1_1.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_collection/08181_product_w_2_1.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/08181_product_w_2_6.png" width="80%" />
+      </td>
+   </tr>
+   </table>
+
+
+
 
 
 After collecting the data, I did annotations for each product because I wanted to use the same datasets for image detection project. 
 
-<img src="11.png" width="250"> <img src="12.png" width="250">
+<table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Data_collection/11.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_collection/12.png" width="80%" />
+      </td>
+   </tr>
+   </table>
+
+
 
 Data_pre-processing
 ==========
 
 * `Fine Crop` - Based on annotation files, I cropped the images and resized them.
 
-<img src="fine_24.png" width="250"> <img src="fine_32.png" width="250"> 
+
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Data_pre-processing/fine_24.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/fine_32" width="80%" />
+      </td>
+   </tr>
+   </table>
+
 
 * `Noise Crop` - I annotated the root image including noises. After that I cropped them and resized. 
+
+<table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Data_pre-processing/noise_1.png" width="80%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/noise_2" width="80%" />
+      </td>
+   </tr>
+   </table>
+
 
 <img src="noise_1.png" width="250"> <img src="noise_2.png" width="250"> 
 
