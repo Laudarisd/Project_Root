@@ -90,7 +90,8 @@ Data_pre-processing
    </tr>
    </table>
 
- <table border="0">
+
+   <table border="0">
    <tr>
       <td>
       <img src="./Source/Data_pre-processing/70.png" width="80%" />
