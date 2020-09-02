@@ -149,7 +149,7 @@ Data_pre-processing
       <img src="./Source/Data_pre-processing/3575.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/3892.png" width="100%" />
+      <img src="./Source/Data_pre-processing/3892.jpg" width="100%" />
       </td>
    </tr>
    </table>
