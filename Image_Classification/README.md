@@ -181,6 +181,7 @@ Pre-train weight
 
 I used [`resnet50`](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet50) as a pre-train weight while training my custom data.
 
+
 Training
 ===========
 In this project I used [`Efficientnet`](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Training/Efnet_tf_data_train.py) frame work to train my custom dataset.
@@ -252,8 +253,12 @@ If the training goes well, it will show the following information in terminal.
       </td>
    </tr>
    </table>
+   
+   
 **Model can be changes by changing these lines**
+
 Such as for B5:
+
 
 ```
 from efficientnet.tfkeras import EfficientNetB5, preprocess_input
