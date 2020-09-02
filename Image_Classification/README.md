@@ -75,6 +75,22 @@ Data_pre-processing
 
 * `Augmentation`: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Data_pre-processing/albumentation_aug1.py). I generated around `5000` images for each classes.
 
+
+   <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Data_pre-processing/194.png" width="100%" />
+      </td>
+      <td>
+      <img src="./Source/Data_pre-processing/56.png" />
+      </td>
+   </tr>
+   </table>
+
+
+
+
+
 <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/194.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/56.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/66.png" width="250">
 
 <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/70.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/265.png" width="250"> <img src="https://github.com/Laudarisd/Project_Root/tree/master/Image_Classification/Source/Data_pre-processing/375.png" width="250">
