@@ -343,7 +343,75 @@ The main purpose of Binary model inference is to find out empty columns when the
 I also tried to test my model in live cam though it was not the object detection task. In this process, I made `.xml` files which contained bounding box as I annotated my images. In live streaming, only the part which are contained by the bounding boxes are tested.
 So result was pretty good and I was happy to use my classification model as detection on live streaming. 
 
- <table border="0">
+
+Structure of `binary-model inference'
+
+```
+wi_empty_xml = './4.xml_empty/wi_empty.xml'
+wi_product_xml = './4.xml/wi_product.xml'
+
+d_empty_xml = './4.xml_empty/1.empty_108.xml'
+d_product_xml = './4.xml/1.product_25.xml'
+
+
+# File path
+main_label_file = './labels_total.txt'
+binary_label_file = './labels_binary.txt'
+
+
+# Model File path
+main_model_path = './1.model/total_b3.h5'
+empty_model_path = './1.model/total_empty.h5'
+```
+Similarly, crop images are set as follows:
+
+```
+def crop(image, box):
+    xmin, ymin, xmax, ymax = box
+    result = image[ymin:ymax+1, xmin:xmax+1, :]
+    return result
+
+
+def crop_image(image, boxes, resize=None, save_path=None):
+    # image: cv2 image
+    images = list(map(lambda b : crop(image, b), boxes)) 
+    # boxes: [[xmin, ymin, xmax, ymax], ...] <- 이걸로 crop
+
+    if str(type(resize)) == "<class 'tuple'>":
+        try:
+            images = list(map(lambda i: cv2.resize(i, dsize=resize, interpolation=cv2.INTER_LINEAR), images))
+        except Exception as e:
+            print(str(e))
+    return images
+```
+
+
+Load models:
+
+```
+empty_model = tf.keras.models.load_model(empty_model_path)
+    empty_model.summary()
+    main_model = tf.keras.models.load_model(main_model_path)
+    main_model.summary()
+    
+# Load main label class
+    df = pd.read_csv(main_label_file, sep = ' ', index_col=False, header=None)
+    CLASS_NAMES = df[0].tolist()
+    # CLASS_NAMES = sorted(CLASS_NAMES)
+
+    # Load binary empty label class
+    df = pd.read_csv(binary_label_file, sep = ' ', index_col=False, header=None)
+    EM_CLASS_NAMES = df[0].tolist()
+    EM_CLASS_NAMES = sorted(EM_CLASS_NAMES)
+```
+
+
+
+
+
+**Images: We can see empty column when product is not there in the output image**
+
+<table border="0">
    <tr>
       <td>
       <img src="./Source/Binary_model_inference/111.png" width="100%" />
