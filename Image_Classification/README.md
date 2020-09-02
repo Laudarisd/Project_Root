@@ -64,7 +64,7 @@ e.g.
       <img src="./Source/Data_collection/08181_product_w_2_1.png" width="80%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/08181_product_w_2_6.png" width="80%" />
+      <img src="./Source//Data_collection/08181_product_w_2_6.png" width="80%" />
       </td>
    </tr>
    </table>
@@ -100,7 +100,7 @@ Data_pre-processing
       <img src="./Source/Data_pre-processing/fine_24.png" width="80%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/fine_32" width="80%" />
+      <img src="./Source/Data_pre-processing/fine_32.png" width="80%" />
       </td>
    </tr>
    </table>
@@ -114,7 +114,7 @@ Data_pre-processing
       <img src="./Source/Data_pre-processing/noise_1.png" width="80%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/noise_2" width="80%" />
+      <img src="./Source/Data_pre-processing/noise_2.png" width="80%" />
       </td>
    </tr>
    </table>
