@@ -283,13 +283,19 @@ Result
  <table border="0">
    <tr>
       <td>
-      <img src="./Source/Result/1598921008766.png" width="100%" />
+      <img src="./Source/Result/result_terminal.png" width="100%" />
       </td>
    </tr>
    </table>
 
 
-
+ <table border="0">
+   <tr>
+      <td>
+      <img src="./Source/Result/12.png" width="100%" />
+      </td>
+   </tr>
+   </table>
 
 
 
