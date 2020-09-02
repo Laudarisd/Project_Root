@@ -58,13 +58,13 @@ e.g.
 <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_collection/08181_product_w_1_1.png" width="80%" />
+      <img src="./Source/Data_collection/08181_product_w_1_1.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_collection/08181_product_w_2_1.png" width="80%" />
+      <img src="./Source/Data_collection/08181_product_w_2_1.png" width="100%" />
       </td>
       <td>
-      <img src="./Source//Data_collection/08181_product_w_2_6.png" width="80%" />
+      <img src="./Source//Data_collection/08181_product_w_2_3.png" width="100%" />
       </td>
    </tr>
    </table>
@@ -78,10 +78,10 @@ After collecting the data, I did annotations for each product because I wanted t
 <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_collection/11.png" width="80%" />
+      <img src="./Source/Data_collection/11.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_collection/12.png" width="80%" />
+      <img src="./Source/Data_collection/12.png" width="100%" />
       </td>
    </tr>
    </table>
@@ -97,10 +97,10 @@ Data_pre-processing
  <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_pre-processing/fine_24.png" width="80%" />
+      <img src="./Source/Data_pre-processing/fine_24.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/fine_32.png" width="80%" />
+      <img src="./Source/Data_pre-processing/fine_32.png" width="100%" />
       </td>
    </tr>
    </table>
@@ -111,16 +111,16 @@ Data_pre-processing
 <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_pre-processing/noise_1.png" width="80%" />
+      <img src="./Source/Data_pre-processing/noise_1.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/noise_2.png" width="80%" />
+      <img src="./Source/Data_pre-processing/noise_2.png" width="100%" />
       </td>
    </tr>
    </table>
 
 
-<img src="noise_1.png" width="250"> <img src="noise_2.png" width="250"> 
+ 
 
 * `Augmentation`: After cropping the images, I merged fine crop and noise crop images. After that I did [`augmentation`](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Data_pre-processing/albumentation_aug1.py). I generated around `5000` images for each classes.
 
@@ -128,10 +128,10 @@ Data_pre-processing
    <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_pre-processing/194.png" width="80%" />
+      <img src="./Source/Data_pre-processing/194.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/56.png" width="80%" />
+      <img src="./Source/Data_pre-processing/56.png" width="100%" />
       </td>
       <td>
       <img src="./Source/Data_pre-processing/66.png" width="80%" />
@@ -143,13 +143,13 @@ Data_pre-processing
    <table border="0">
    <tr>
       <td>
-      <img src="./Source/Data_pre-processing/70.png" width="80%" />
+      <img src="./Source/Data_pre-processing/70.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/265.png" width="80%" />
+      <img src="./Source/Data_pre-processing/265.png" width="100%" />
       </td>
       <td>
-      <img src="./Source/Data_pre-processing/375.png" width="80%" />
+      <img src="./Source/Data_pre-processing/375.png" width="100%" />
       </td>
    </tr>
    </table>
