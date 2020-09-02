@@ -35,9 +35,9 @@ Table of contents
     * [Pre-train weight](#Pre-train weight)
     * [Training](#Training)
     * [Inference](#Inference)
-        * [Single_model_inference]()
-        * [Binary_model_inference]()
-    * [Result]()
+        * [Single_model_inference](#Single_model_inference)
+        * [Binary_model_inference](Binary_model_inference)
+    * [Result](#Result)
 <!--te-->
 
 Setup
