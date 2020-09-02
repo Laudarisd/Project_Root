@@ -29,11 +29,12 @@ Table of contents
 
 <!--ts-->
 * [Source](#Source)
-    * [Setup]()
-    * [Data_collection]()
-    * [Data_pre-processing]()
-    * [Training]()
-    * [Inference]()
+    * [Setup](#Setup)
+    * [Data_collection](#Data_collection)
+    * [Data_pre-processing](#Data_pre-processing)
+    * [Pre-train weight](#Pre-train weight)
+    * [Training](#Training)
+    * [Inference](#Inference)
         * [Single_model_inference]()
         * [Binary_model_inference]()
     * [Result]()
@@ -93,7 +94,7 @@ After collecting the data, I did `annotations` for each product because I wanted
 
 
 Data_pre-processing
-==========-=======
+=================
 
 First step of training data prepartion was `cropping` the raw images. So, I cropped them as follows:
 
@@ -175,9 +176,14 @@ First step of training data prepartion was `cropping` the raw images. So, I crop
 * `Train, Valid` - After completing all the above works, separate dataset in to train (80%) and valid(20%)
 
 
+Pre-train weight
+================
+
+I used [`resnet50`](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet50) as a pre-train weight while training my custom data.
+
 Training
 ===========
-In this project I used `Efficientnet`(https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Training/Efnet_tf_data_train.py) frame work to train my custom dataset.
+In this project I used [`Efficientnet`](https://github.com/Laudarisd/Project_Root/blob/master/Image_Classification/Source/Training/Efnet_tf_data_train.py) frame work to train my custom dataset.
 
 
 ```
