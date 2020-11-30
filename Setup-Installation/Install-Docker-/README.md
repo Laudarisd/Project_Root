@@ -135,7 +135,7 @@ $ sudo apt-get update
 ###### Install nvidia-docker 
 ```
 $ sudo apt-get install -y nvidia-docker2
-$ sudo pkill -SIGHUP dockerd
+$ sudo pkill -SIGHUP docker
 ```
 ###### Check
 ```
