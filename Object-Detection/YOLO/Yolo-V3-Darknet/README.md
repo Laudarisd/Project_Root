@@ -160,8 +160,8 @@ $ python test_1.py
 
 ## Result
 
-![Result](../result/1.png)
-<img src="./result/1.png" width="250"> <img src="train_batch2.jpg" width="250"> <img src="test_batch0_gt.jpg" width="250">
+![Result]
+<img src="./result/1.png" width="250">
 
 Class | prediction
 --- | ---
