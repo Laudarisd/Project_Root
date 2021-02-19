@@ -160,7 +160,7 @@ $ python test_1.py
 
 ## Result
 
-![Result](../master/result/1.png)
+![Result](../result/1.png)
 
 
 Class | prediction
