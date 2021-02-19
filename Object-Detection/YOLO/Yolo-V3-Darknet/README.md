@@ -160,7 +160,6 @@ $ python test_1.py
 
 ## Result
 
-![Result]
 <img src="./result/1.png" width="250">
 
 Class | prediction
