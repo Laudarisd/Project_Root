@@ -20,3 +20,40 @@ pip --version
 
 $ pip3 install --upgrade tensorflow==2.0.0  
 $ pip3 install --upgrade tensorflow-gpu==2.0.0 
+
+
+
+# Remove Tensorflow completely
+
+**Check tensorflow list in local device**
+- `pip list|grep tensorflow`
+- After that run the following commands one by one by adding all tensorflow files
+  `pip3 uninstall .....`
+  
+      or 
+      
+   `sudo pip3 uninstall .......`
+   
+   
+   
+# Install tensorflow GPU
+
+`sudo pip3 install tensorflow-gpu==2.0`
+
+**check**
+
+`import tensorflow as tf
+tf.test.is_gpu_available(
+    cuda_only=False,
+    min_cuda_compute_capability=None
+)`
+
+
+or   
+
+
+`tf.test.is_gpu_available()`
+
+
+
+
