@@ -28,7 +28,7 @@ sudo systemctl restart docker
 After installation of Docker
 
 
-#  Obtain the all-in-one image from Docker Hub
+#  Obtain all-in-one image from Docker Hub
 ```
 $ docker pull ufoym/deepo
 ```
@@ -77,9 +77,16 @@ $ sudo chmod 666 /var/run/docker.sock
 $ docker --version
 $ docker ps
 
-# make a new container and mount current directory to docker 
+# make a new container(test) and mount current directory to docker 
 
 $ docker run --name "test" --gpus all -v "${PWD}" -it ufoym/deepo bash
+
+# If this doesn't mount desire dir, try this 
+
+$ docker run --name "test" --gpus all -v "${PWD}:/workspace" -it ufoym/deepo bash
+
+
+# After making the container "test", we can start and attach container whenever we want.
 
 # start container;
 $ docker start test
