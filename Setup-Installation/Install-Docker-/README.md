@@ -1,92 +1,68 @@
-# Install-Docker
-Install Docker in Ubuntu 18.04
+# Install-Docker(GPU)
+Install Docker in Ubuntu 20.04
 
-###### Update apt
-```
-$ sudo apt update
-$ sudo apt upgrade
-```
-
-###### Install prerequiste packages
 
 ```
-$ sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-```
+sudo apt-get update
+sudo apt-get remove docker docker-engine docker.io
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
 
-###### Add the Docker repositories 
+# Put the user in the docker group
+sudo usermod -a -G docker $USER
+newgrp docker
 
-```
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" # q to quit
-$ sudo apt update
-```
-###### Add Docker's official GPG key
-```
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
-###### Docker's official repo
-```
-$ sudo add-apt-repository "deb [arch=amd64] 
- > https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
- ```
- ###### Update and install Docker CE
-```
-$ sudo apt-get update
-$ sudo apt-get install docker-ce
-```
-###### Check Docker version
+# Nvidia Docker
+sudo apt install curl
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 
+sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
 ```
-$ docker version
-or
-$ docker -v
-```
-###### To remove the requirement of 'sudo' add user name to group
-```
-$ sudo usermod -aG docker Username
-```
-###### To login 
-```
-$ ssu - Username
-```
-
-# GPU Version
-
-```
-
-$ curl -sL https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-$ curl -sL https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-$ sudo apt update
-$ sudo apt install nvidia-docker2 -y
-$ sudo pkill -SIGHUP dockerd
-$ sudo docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
-
-```
-
+===========================================================================================================
 
 After installation of Docker
 
-## Process 1:
 
-
-######  Obtain the all-in-one image from Docker Hub
+#  Obtain the all-in-one image from Docker Hub
 ```
 $ docker pull ufoym/deepo
 ```
 
  
-###### Reboot server 
+# Reboot server 
 
 ```
 $ sudo reboot
 ```
-###### Check
+# Check
 ```
 $ docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 ```
 
-- If encountered following problems :
+============================================================================================================================
+
+# Erase all Docker images [!!! CAUTION !!!]
+```
+docker rmi -f $(docker images -a -q)
+```
+
+==================================================================================================================================
+
+# Erase one Docker image  [!!! CAUTION !!!]
+```
+docker ps
+docker rmi -f image_id
+
+```
+
+==================================================================================================================
+
+# If encountered following problems :
 
 ```
 $ docker run --runtime=nvidia -it nvcr.io/nvidia/tlt-streamanalytics:v1.0_py2 /bin/bash
@@ -111,39 +87,10 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 $ sudo chmod 666 /var/run/docker.sock
 ```
 
+===============================================================================================================================
 
 
-
-
-
-## Process 2
-
-###### Set GPC
-
-```
-$ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
-  sudo apt-key add -
-$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-$ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
-  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-```
-
-###### Update apt
-```
-$ sudo apt-get update
-```
-###### Install nvidia-docker 
-```
-$ sudo apt-get install -y nvidia-docker2
-$ sudo pkill -SIGHUP docker
-```
-###### Check
-```
-$ docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
-```
-
-
-## Usages
+# Usages
 
 ```
 # check 
@@ -159,7 +106,7 @@ $ docker start test
 # attach contatiner:
 $ docker attach test
 ```
-- To mount the desire derectory:
+## To mount the desire derectory:
 ```
 # From ubuntu terminal
 $  docker run --gpus all -v "${PWD}:/workspace" -it ufoym/deepo bash
@@ -177,9 +124,9 @@ $ docker run --gpus all -it -v /host/data:/data -v /host/config:/config ufoym/de
 ```
 
 
+=========================================================================================================================
 
-
-## Check python libraries  after mounting 
+# Check python libraries  after mounting 
 
 e.g. Checking tensorflow , pytorch, opencv
 
@@ -205,9 +152,9 @@ True
 >>> cv2.__version__
 '4.3.0'
 ```
+===================================================================================================================================
 
-
-## To uninstall Docker 
+# To uninstall Docker 
 ```
 # Check :
 $ dpkg -l | grep -i docker
@@ -222,7 +169,7 @@ $ sudo rm /etc/apparmor.d/docker
 $ sudo groupdel docker
 $ sudo rm -rf /var/run/docker.sock
 ```
-
+============================================================================================================================
 
 ## References 
 * https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
