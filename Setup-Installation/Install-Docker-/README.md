@@ -23,7 +23,7 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
 ```
-===========================================================================================================
+==================================================================================
 
 After installation of Docker
 
@@ -43,24 +43,7 @@ $ sudo reboot
 ```
 $ docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 ```
-
-============================================================================================================================
-
-# Erase all Docker images [!!! CAUTION !!!]
-```
-docker rmi -f $(docker images -a -q)
-```
-
-==================================================================================================================================
-
-# Erase one Docker image  [!!! CAUTION !!!]
-```
-docker ps
-docker rmi -f image_id
-
-```
-
-==================================================================================================================
+=====================================================================================
 
 # If encountered following problems :
 
@@ -86,10 +69,7 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 
 $ sudo chmod 666 /var/run/docker.sock
 ```
-
-===============================================================================================================================
-
-
+=====================================================================================
 # Usages
 
 ```
@@ -124,8 +104,31 @@ $ docker run --gpus all -it -v /host/data:/data -v /host/config:/config ufoym/de
 ```
 
 
-=========================================================================================================================
+==============================================================================
 
+
+
+
+
+
+# Erase all Docker images [!!! CAUTION !!!]
+```
+docker rmi -f $(docker images -a -q)
+```
+
+=======================================================================
+
+# Erase one Docker image  [!!! CAUTION !!!]
+```
+docker ps
+docker rmi -f image_id
+
+```
+
+==========================================================================
+
+
+\
 # Check python libraries  after mounting 
 
 e.g. Checking tensorflow , pytorch, opencv
@@ -152,7 +155,7 @@ True
 >>> cv2.__version__
 '4.3.0'
 ```
-===================================================================================================================================
+======================================================================================
 
 # To uninstall Docker 
 ```
@@ -169,8 +172,7 @@ $ sudo rm /etc/apparmor.d/docker
 $ sudo groupdel docker
 $ sudo rm -rf /var/run/docker.sock
 ```
-============================================================================================================================
-
+=================================================================================
 ## References 
 * https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
 * https://hub.docker.com/r/ufoym/deepo/
