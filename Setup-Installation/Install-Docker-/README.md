@@ -70,7 +70,7 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 $ sudo chmod 666 /var/run/docker.sock
 ```
 =====================================================================================
-# Usages
+# To Use Docker
 
 ```
 # check 
