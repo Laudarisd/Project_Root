@@ -763,6 +763,11 @@ $ python3 train.py --batch 19 --epochs 300 --data ./data/train_5classes.yaml --c
 # avoid auto anchor by adding this line in training command
 
 python train.py --noautoanchor
+
+
+# test.py can evaluate mAP on train, val, or test part of a dataset with the --task option
+
+python test.py --data data.yaml --task test
 ```
 
 
