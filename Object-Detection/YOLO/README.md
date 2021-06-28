@@ -748,6 +748,24 @@ layer                                     name  gradient   parameters           
 
 ```
 
+
+
+
+
+Train custom data instruction
+==================================
+
+```
+#Training command
+
+
+$ python3 train.py --batch 19 --epochs 300 --data ./data/train_5classes.yaml --cfg ./models/customer_yolov5l_5classes.yaml --weights yolov5l.pt --name 5classes_yolov5l --nosave --cache
+# avoid auto anchor by adding this line in training command
+
+python train.py --noautoanchor
+```
+
+
 https://jonathan-hui.medium.com/yolov4-c9901eaa8e61
 https://towardsai.net/p/computer-vision/yolo-v5%E2%80%8A-%E2%80%8Aexplained-and-demystified
 https://arxiv.org/pdf/2004.10934.pdf
